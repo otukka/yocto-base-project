@@ -10,6 +10,7 @@ BBLAYERS ?= " \
     ##OEROOT##/../meta-openembedded/meta-networking \
     ##OEROOT##/../meta-openembedded/meta-python \
     ##OEROOT##/../meta-openembedded/meta-initramfs \
+    ##OEROOT##/../meta-openembedded/meta-multimedia \
     ##OEROOT##/../meta-openembedded/meta-oe \
     ##OEROOT##/../meta-xilinx/meta-xilinx-bsp \
     ##OEROOT##/../meta-xilinx/meta-xilinx-pynq \
@@ -17,6 +18,9 @@ BBLAYERS ?= " \
     ##OEROOT##/../meta-xilinx-tools \
     ##OEROOT##/../meta-petalinux \
     ##OEROOT##/../meta-openamp \
+    ##OEROOT##/../meta-virtualization \
+    ##OEROOT##/../meta-qt5 \
+    ##OEROOT##/../meta-own \
 "
 
 BBLAYERS_NON_REMOVABLE ?= " \

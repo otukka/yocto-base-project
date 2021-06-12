@@ -1,9 +1,34 @@
 #!/bin/bash
 
-rm -rf build/
-mkdir build
-chown odelma:yocto -R build
+# Build docker file
+if ! docker images|grep yoctobuilder -q; then
+    docker build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) -t yoctobuilder .
+fi
 
+# Remove old results
+if [[ -d "build" ]]; then
+    rm -rf build
+fi
+
+if [[ -d "output" ]]; then
+    rm -rf output
+fi
+
+mkdir build
+mkdir output
+
+# Docker usually do not handle folder mounts properly if the folders are not present
+if [[ ! -d "downloads" ]]; then
+    mkdir downloads
+fi
+
+if [[ ! -d "sstate-cache" ]]; then
+    mkdir sstate-cache
+fi
+
+
+
+# Run yocto build using docker container
 docker run -it --rm \
 -v ${PWD}/sstate-cache/:/work/sstate-cache \
 -v ${PWD}/downloads/:/work/downloads \
@@ -25,4 +50,6 @@ docker run -it --rm \
 -t yoctobuilder \
 /bin/bash -c /work/build.sh || exit 1
 
-# sh output/poky-glibc-x86_64-core-image-minimal-aarch64-toolchain-2.6.1.sh -y
+
+# Install sdk
+sh output/poky-glibc-x86_64-core-image-minimal-aarch64-toolchain-2.6.1.sh -y

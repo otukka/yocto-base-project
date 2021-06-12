@@ -1,7 +1,4 @@
-# Build docker image:
-# $ docker build -t yoctobuilder --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .
-# Run container:
-# $ docker run -it --rm -v ${PWD}/downloads:/work/downloads -v ${PWD}/sstate-cache:/work/sstate-cache -t yoctobuilder build.sh
+
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
@@ -63,6 +60,7 @@ ENV USE_XSCT_TARBALL="0"
 ENV XILINX_SDK_TOOLCHAIN="/xsct/Vitis/2019.2"
 RUN cd /xsct \
 && wget http://petalinux.xilinx.com/sswreleases/rel-v2019/xsct-trim/xsct-2019-2.tar.xz \
-&& tar -xJf xsct-2019-2.tar.xz
+&& tar -xJf xsct-2019-2.tar.xz \
+&& rm xsct-2019-2.tar.xz
 
 WORKDIR /work
