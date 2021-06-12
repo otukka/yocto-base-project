@@ -1,0 +1,44 @@
+[submodule "poky"]
+	path = poky
+	url = https://github.com/Xilinx/poky.git
+	branch = rel-v2019.2
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = https://github.com/Xilinx/meta-openembedded.git
+	branch = rel-v2019.2
+[submodule "meta-xilinx"]
+	path = meta-xilinx
+	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = rel-v2019.2
+[submodule "meta-openamp"]
+	path = meta-openamp
+	url = https://github.com/Xilinx/meta-openamp.git
+	branch = rel-v2019.2
+[submodule "meta-xilinx-tools"]
+	path = meta-xilinx-tools
+	url = https://github.com/Xilinx/meta-xilinx-tools.git
+	branch = rel-v2019.2
+[submodule "meta-xilinx-petalinux"]
+	path = meta-xilinx-petalinux
+	url = https://github.com/Xilinx/meta-petalinux.git
+	branch = rel-v2019.2
+[submodule "meta-browser"]
+	path = meta-browser
+	url = https://github.com/Xilinx/meta-browser.git
+	branch = rel-v2019.2
+[submodule "meta-qt5"]
+	path = meta-qt5
+	url = https://github.com/Xilinx/meta-qt5.git
+	branch = rel-v2019.2
+[submodule "meta-petalinux"]
+	path = meta-petalinux
+	url = https://github.com/Xilinx/meta-petalinux.git
+	branch = rel-v2019.2
+[submodule "meta-virtualization"]
+	path = meta-virtualization
+	url = https://github.com/Xilinx/meta-virtualization.git
+	branch = rel-v2019.2
+[submodule "meta-jupyter"]
+	path = meta-jupyter
+	url = https://github.com/Xilinx/meta-jupyter.git
+	branch = rel-v2019.2
