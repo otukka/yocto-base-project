@@ -52,4 +52,4 @@ docker run -it --rm \
 
 
 # Install sdk
-sh output/poky-glibc-x86_64-core-image-minimal-aarch64-toolchain-2.6.1.sh -y
+sh output/poky-glibc-x86_64-core-image-minimal-aarch64-toolchain-2.6.1.sh -y 
