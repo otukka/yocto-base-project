@@ -59,7 +59,7 @@ RUN mkdir /work/sstate-cache
 ENV USE_XSCT_TARBALL="0"
 ENV XILINX_SDK_TOOLCHAIN="/xsct/Vitis/2019.2"
 RUN cd /xsct \
-&& wget http://petalinux.xilinx.com/sswreleases/rel-v2019/xsct-trim/xsct-2019-2.tar.xz \
+&& curl http://petalinux.xilinx.com/sswreleases/rel-v2019/xsct-trim/xsct-2019-2.tar.xz --output xsct-2019-2.tar.xz\
 && tar -xJf xsct-2019-2.tar.xz \
 && rm xsct-2019-2.tar.xz
 

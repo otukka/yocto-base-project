@@ -5,12 +5,10 @@
 DOWNLOADS="/work/downloads/"
 SSTATE="/work/sstate-cache"
 
-# export LAYER="own"
-
-
 
 export TEMPLATECONF="${PWD}/meta-own/conf"
 export MACHINE="custom-zcu111-zynqmp"
+
 source poky/oe-init-build-env build
 
 echo "USE_XSCT_TARBALL=\"0\"" >> conf/local.conf

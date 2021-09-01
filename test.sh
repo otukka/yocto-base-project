@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Build docker file
+# Build docker image if not present
 if ! docker images|grep yoctobuilder -q; then
     docker build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) -t yoctobuilder .
 fi
@@ -17,11 +17,11 @@ fi
 mkdir build
 mkdir output
 
-# Docker usually do not handle folder mounts properly if the folders are not present
+# Docker usually do not handle folder mounts properly if the folders are not present.
+# Do not remove these between builds.
 if [[ ! -d "downloads" ]]; then
     mkdir downloads
 fi
-
 if [[ ! -d "sstate-cache" ]]; then
     mkdir sstate-cache
 fi
