@@ -1,0 +1,24 @@
+From 266774861c7ec5597984d8c1f0ae457a12bf24c5 Mon Sep 17 00:00:00 2001
+From: Otto Multanen <multanen.otto@gmail.com>
+Date: Thu, 23 Sep 2021 19:45:54 +0300
+Subject: [PATCH 1/1] remove xrfdc include
+
+---
+ src/main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main.cpp b/src/main.cpp
+index 6687359..1ee4ed3 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -1,6 +1,6 @@
+ 
+ #include <iostream>
+-#include "xrfdc.h"
++// #include "xrfdc.h"
+ 
+ 
+ int main(int argc, char const *argv[])
+-- 
+2.25.1
+
